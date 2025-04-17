@@ -13,7 +13,9 @@
         <?php if (isset($_SESSION['user'])): ?>
 <?php if ($_SESSION['user']['tipo'] == 'admin'): ?>
         <a href="adicionar.php">Adicionar Produto</a>
+        <a href="adicionar_utilizadores.php">Adicionar Utilizadores</a>
         <?php endif; ?>
+        
         <a href="logout.php">Logout(<?php echo htmlspecialchars($_SESSION['user']['username']); ?>) </a>
         <?php else: ?>
 
