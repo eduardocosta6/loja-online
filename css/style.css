@@ -219,28 +219,153 @@ form button:hover {
 }
 
 /* Carrinho */
+.carrinho-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
 .carrinho-item {
     background: var(--white);
-    padding: 20px;
-    margin: 10px auto;
-    max-width: 800px;
+    padding: 25px;
+    margin: 15px auto;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.carrinho-item img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+.carrinho-item .nome {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.carrinho-item .preco {
+    color: var(--gray-dark);
+    font-size: 1.1em;
+}
+
+.carrinho-item .quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carrinho-item .quantidade button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carrinho-item .quantidade button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.carrinho-item .subtotal {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.carrinho-item .remover {
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.carrinho-item .remover:hover {
+    color: #c82333;
+    transform: scale(1.1);
+}
+
+.carrinho-total {
+    background: var(--white);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.total {
-    background: var(--white);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    text-align: right;
+.carrinho-total .valor {
+    color: var(--primary-dark);
     font-size: 1.2em;
-    font-weight: bold;
+}
+
+.carrinho-acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.carrinho-acoes button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-continuar {
+    background-color: var(--gray-light);
+    color: var(--text-color);
+}
+
+.btn-finalizar {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn-continuar:hover,
+.btn-finalizar:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.carrinho-vazio {
+    text-align: center;
+    padding: 50px;
+    color: var(--gray-dark);
+}
+
+@media (max-width: 768px) {
+    .carrinho-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .carrinho-item img {
+        margin: 0 auto;
+    }
+
+    .carrinho-acoes {
+        flex-direction: column;
+    }
+
+    .carrinho-acoes button {
+        width: 100%;
+    }
 }
 
 /* Footer */
@@ -285,28 +410,31 @@ footer p {
 /* Tabelas */
 table {
     width: 100%;
-    max-width: 1000px;
-    margin: 20px auto;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
     border-collapse: collapse;
-    overflow: hidden;
+    margin: 20px 0;
 }
 
 th, td {
-    padding: 15px;
+    padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 th {
     background-color: var(--primary-color);
-    color: var(--text-color);
 }
 
-tr:hover {
-    background-color: var(--gray-light);
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
 }
 
 /* Links gerais */

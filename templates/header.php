@@ -16,7 +16,7 @@
         <a href="adicionar_utilizadores.php">Adicionar Utilizadores</a>
         <?php endif; ?>
         
-        <a href="logout.php">Logout(<?php echo htmlspecialchars($_SESSION['user']['username']); ?>) </a>
+        <a href="logout.php">Logout [<?php echo htmlspecialchars($_SESSION['user']['username']); ?>] </a>
         <?php else: ?>
 
             <a href="login.php">Login</a>
