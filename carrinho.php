@@ -72,7 +72,7 @@ $stmt->execute([$id_user]);
         </table>
 
         <div style="margin-top: 20px; text-align: center;">
-            <a href="index.php"><button>Continuar Comprando</button></a>
+            <a href="index.php"><button>Continuar a comprar</button></a>
             <button>Finalizar Compra</button>
         </div>
     <?php else: ?>
